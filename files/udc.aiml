@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+	<!-- Error message -->
+	<category>
+		<pattern>
+			*
+		</pattern>
+		<template>
+			Sorry, could not understand you please write your question again.
+		</template>
+	</category>
+	
+	<!-- Greetings message -->
+	<category>
+		<pattern>
+			HELLO
+		</pattern>
+		<template>
+			Hello, I am Mr.Robot and my goal is to motivate you Firstly I would like to know your age.
+		</template>
+	</category>
+	<category>
+		<pattern>
+			HELLO *
+		</pattern>
+		<template>
+			Hello, I am Mr.Robot and my goal is to motivate you. How old are you?
+		</template>
+	</category>
+	<category>
+		<pattern>
+			HI
+		</pattern>
+		<template>
+			<random>
+				<li>
+					Hello, I am Mr.Robot and my goal is to motivate you Firstly I would like to know your age.
+				</li>
+				<li>
+					Hi there, I am Mr.Robot and my goal is to motivate you. How old are you?
+				</li>
+				<li>
+					Good to see you, I am Mr.Robot and my goal is to motivate you. Please tell me your age.
+				</li>
+			</random>
+		</template>
+	</category>
+	<category>
+		<pattern>
+			HI *
+		</pattern>
+		<template>
+			Hello, I am Mr.Robot and my goal is to motivate you Firstly I would like to know your age.
+		</template>
+	</category>
+	
+	<!-- Years -->
+	<category>
+		<pattern>
+			 * years
+		</pattern>
+		<template>
+			Excellent, now I would like to know your name and lastname.
+		</template>
+	</category>
+	
+	<!-- Name -->
+	<category>
+		<pattern>
+		     * *
+		</pattern>
+		<template>
+			Nice to meet you
+			<set name="firstname"> <star index="1" /> </set>
+			<set name="lastname">
+				<star index="2" />
+			</set>
+			.
+			I can recommend you top great movies or top songs. What do you like movies or music?
+			<reply>
+				<text>
+					Movies
+				</text>
+				<postback>
+					Movies
+				</postback>
+			</reply>
+			<reply>
+				<text>
+					Music
+				</text>
+				<postback>
+					Music
+				</postback>
+			</reply>
+		</template>
+	</category>
+	
+	<!-- Checking the name -->
+	<category>
+		<pattern>
+			WHAT IS MY FIRSTNAME
+		</pattern>
+		<template>
+			Your firstname is
+			<get name="firstname">
+				.
+			</get>
+		</template>
+	</category>
+	<category>
+		<pattern>
+			WHAT IS MY LASTNAME
+		</pattern>
+		<template>
+			Your lastname is
+			<get name="lastname">
+				.
+			</get>
+		</template>
+	</category>
+	<category>
+		<pattern>
+			WHAT IS MY FULLNAME
+		</pattern>
+		<template>
+			Your name is
+			<get name="firstname">
+			</get>
+			<get name="lastname">
+				.
+			</get>
+		</template>
+	</category>
+	
+	<!-- Movies -->
+	<category>
+		<pattern>
+			MOVIES
+		</pattern>
+		<template>
+			Choose the genre of movies which you mostly like
+			<carousel>
+				<card>
+					<title>
+						THE BEST ACTION MOVIES OF 2019
+					</title>
+					<subtitle>
+						What is the state of the action movie in 2019? You could say theyâve never been stronger: They generate all the hype and they break all the records â we just call them superhero movies these days.Made of metal
+					</subtitle>
+					<image>
+						https://images-na.ssl-images-amazon.com/images/I/91wc7yc2R8L._SL1500_.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							https://editorial.rottentomatoes.com/guide/best-action-movies-of-2019/
+						</url>
+					</button>
+				</card>
+				<card>
+					<title>
+						THE BEST COMEDY MOVIES OF 2019
+					</title>
+					<subtitle>
+						In the first half of 2019, comedy has come in the form of star vehicles (Long Shot, The Dead Donât Die, The Professor), rom-com satires (Isnât It Romantic), actual actual rom-coms (Plus One, Always Be My Maybe).
+					</subtitle>
+					<image>
+						https://cdn3.movieweb.com/i/movie/k2FnCXxWd0aNU7pkkfLisaJQVeiBYP/460:50/Long-Shot.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							https://editorial.rottentomatoes.com/guide/best-comedies-2019/
+						</url>
+					</button>
+				</card>
+				<card>
+					<title>
+						BEST SCI-FI MOVIES OF 2019
+					</title>
+					<subtitle>
+						2019 is one of those movie years that sees cosmic superheroes, unstoppable syndicate assassins, and crime-solving pocket monsters with regularity.
+					</subtitle>
+					<image>
+						https://cdn3.movieweb.com/i/movie/YI0HL5memw9l8wkp5629Af9CqzbMCd/384:50/Aladdin.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							hhttps://editorial.rottentomatoes.com/guide/best-sci-fi-movies-and-the-worst-of-2019/
+						</url>
+					</button>
+				</card>
+			</carousel>
+		</template>
+	</category>
+	
+	<!-- Music -->
+	<category>
+		<pattern>
+			MUSIC
+		</pattern>
+		<template>
+		 I can show you random music videos 
+		 <random>
+		     <li>
+		      <![CDATA[<video width="500" controls src="http://dl128.y2mate.com/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ3dqOUEwMHdrY0RxVkptWjBtMit1ME1QWmRKNk1LOG9Xa0Y5ZFgvRC9VVHNhQ05BcUdpYWd4RHlPUjllOWtrenI2ek4xMkNkay9Xd2FzM2VDcW1qUkptUWJoZG9XSVI1NVBZbUp2dGtKbWxuUzF3ZUdBL0VmZTRUai9nVlRSWVNVZXQzVUlNdmlidk5SY3dtekZlKzdiM0o0QWtqYVc3cFZkeWMrUHZRWHovTDA0dnRWMlYwVjRUSVpVM1ovNjRNRGI2QmNKZ3FCRjhFaVJsckh3Vm81N0ViWEtQelI4TnljSC9jYmZBVWxQbld0UG9UM3dydjlydnpSY042VnQrR3VtL09iZ2F6ckZMNWVoSGNEVmNybnM4QT09"></video>]]>
+		       Twenty One Pilots - Ride
+		     </li>
+		       <li>
+		         <![CDATA[<video width="500" controls src="http://dl104.y2mate.com/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ3BtY2MxeUI0Y1ZKUkxyNThqeE51c0tzSktFYjRBMkxXa0JlRlg5Q3pjZU8rSkR3NmptYXdxWnlLcXJvWTJobXlabzU1dVZOa2xFQkR4bCtPY2hqQmlnVnF3TFA3VUdxMUNlSFYrNWhKRjNqYkhpYVB5NFZDcWxXVC9xa3lYYVdvSnZUWkFjTDdkOEkxSDJtZjBPc2pqMm9JSnZobVQ2NUZNNWVtU29UN3cxNDA5dWM1eFYzdDJUSkYzOXE3NStxSG4vQmNTdjhwS2lsM3FwUEx5UUowNUZhQ1FiUjVBWTNCWXU2RytCVXBRbDNWUXFUanJzS285L21rYmRMUjg1V2ZwcUtlK05HN0pLWnFpRmc9PQ%3D%3D"></video>]]>
+		         Maroon 5 - Girls Like You ft. Cardi B
+		     </li>
+		      <li>
+		         <![CDATA[<video width="500" controls src="http://dl126.y2mate.com/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ29uY0VwK0JjbUZaUllxWW9xdyt5bE1mWk9JS013eTQrbkhlRlYrU3pSZHRpZkR3Mkd0S2NyUTJHTjhzOENuaWIvM28xekFmZ2tkQlhIeUxEemhuOTdtVk96ZU5IQkVJZEdiR056L2dVeDlUK2MyZVhCdXhDOTRWdWd0eG5HUGdKUzkya3RKS2ZkOEl0Tm0yckVZcnlwbUp3QXVUV2c1WjlkNWVTU3N3VGl5N2NzaDkxN1dudHlkcFZSNXB2NXpmbkxyVk1tZ3BZZTVVQ2x1KzZqSDZFU0JaV3plbVFvRDNjcjZ0QzhDa3NPZ1NnT3JDcTkrcVlnNEhRZ1FmMG51VEQ2cUt1NEtHZklNSk9pR3RlQk12aTB0TUR0Ni9SazRoQ1U4YkdXemNJWXgxbz0%3D"></video>]]>
+		       Bob Marley - Lets get together and feel alright
+		     </li>
+		 </random>
+	    
+		</template>
+	</category>
+	
+	<!-- Goodbyes -->
+	<category>
+		<pattern>
+			THANK YOU
+		</pattern>
+		<template>
+			<random>
+				<li>
+					You very welcome
+				</li>
+				<li>
+					No problem
+				</li>
+				<li>
+					Ask anytime
+				</li>
+			</random>
+		</template>
+	</category>
+	<category>
+		<pattern>
+			BYE
+		</pattern>
+		<template>
+			<random>
+				<li>
+					Bye!
+				</li>
+				<li>
+				<image>https://media.giphy.com/media/KctrWMQ7u9D2du0YmD/giphy.gif</image>
+				</li>
+				<li>
+					Have a nice day!
+				</li>
+			</random>
+		</template>
+	</category>
+</aiml>
