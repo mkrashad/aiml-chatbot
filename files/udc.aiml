@@ -7,7 +7,7 @@
 			*
 		</pattern>
 		<template>
-			Sorry, could not understand you please write your question again.
+			Sorry, I could not understand you please write your question again.
 		</template>
 	</category>
 	
@@ -17,7 +17,7 @@
 			HELLO
 		</pattern>
 		<template>
-			Hello, I am Mr.Robot and my goal is to motivate you Firstly I would like to know your age.
+			Hello, I am Mr.Robot and I can recommend you good movies or songs. Firstly I would like to know your first and lastnames.
 		</template>
 	</category>
 	<category>
@@ -25,7 +25,7 @@
 			HELLO *
 		</pattern>
 		<template>
-			Hello, I am Mr.Robot and my goal is to motivate you. How old are you?
+			HI, I am Mr.Robot and I can recommend you good movies or songs. Tell me your first and lastnames.
 		</template>
 	</category>
 	<category>
@@ -35,13 +35,13 @@
 		<template>
 			<random>
 				<li>
-					Hello, I am Mr.Robot and my goal is to motivate you Firstly I would like to know your age.
+					Hello, I am Mr.Robot and I can recommend you good movies or songs. Please introduce yourself, write your first and lastnames.
 				</li>
 				<li>
-					Hi there, I am Mr.Robot and my goal is to motivate you. How old are you?
+					Hi there, I am Mr.Robot and I can recommend you good movies or songs. Firstly I would like to know your first and lastnames.
 				</li>
 				<li>
-					Good to see you, I am Mr.Robot and my goal is to motivate you. Please tell me your age.
+					Good to see you, I am Mr.Robot and I can recommend you good movies or songs. Please tell me your first and lastnames.
 				</li>
 			</random>
 		</template>
@@ -51,33 +51,25 @@
 			HI *
 		</pattern>
 		<template>
-			Hello, I am Mr.Robot and my goal is to motivate you Firstly I would like to know your age.
-		</template>
-	</category>
-	
-	<!-- Years -->
-	<category>
-		<pattern>
-			 * years
-		</pattern>
-		<template>
-			Excellent, now I would like to know your firstname and lastname.
+			Hello, I am Mr.Robot and I can recommend you good movies or songs. Please tell me your first and lastnames.
 		</template>
 	</category>
 	
 	<!-- Name -->
 	<category>
 		<pattern>
-		     * *
+			I am * *
 		</pattern>
 		<template>
 			Nice to meet you
-			<set name="firstname"> <star index="1" /> </set>
+			<set name="firstname">
+				<star index="1" />
+			</set>
 			<set name="lastname">
 				<star index="2" />
 			</set>
 			.
-			I can recommend you top great movies or top songs. What do you like most?
+			I can recommend you top great movies or top songs of this year. What do you like most?
 			<reply>
 				<text>
 					Movies
@@ -94,6 +86,267 @@
 					Music
 				</postback>
 			</reply>
+			<reply>
+				<text>
+					Let's talk
+				</text>
+				<postback>
+					TALK
+				</postback>
+			</reply>
+		</template>
+	</category>
+	
+	<!-- Movies -->
+	<category>
+		<pattern>
+			MOVIES
+		</pattern>
+		<template>
+			Choose the genre of movies which you mostly like
+			<carousel>
+				<card>
+					<title>
+						THE BEST ACTION MOVIES OF 2019
+					</title>
+					<subtitle>
+						What is the state of the action movie in 2019? You could say theyâve never been stronger
+					</subtitle>
+					<image>
+						https://images-na.ssl-images-amazon.com/images/I/91wc7yc2R8L._SL1500_.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							https://editorial.rottentomatoes.com/guide/best-action-movies-of-2019/
+						</url>
+					</button>
+				</card>
+				<card>
+					<title>
+						THE BEST ANIMATED MOVIES OF 2019
+					</title>
+					<subtitle>
+						We're never too old for animated films and 2019 is sure to bring some of the best in recent years.
+					</subtitle>
+					<image>
+						https://m.media-amazon.com/images/M/MV5BMTkyOTkwNDc1N15BMl5BanBnXkFtZTgwNzkyMzk3NjM@._V1_.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							https://editorial.rottentomatoes.com/guide/best-action-movies-of-2019/
+						</url>
+					</button>
+				</card>
+				<card>
+					<title>
+						THE BEST COMEDY MOVIES OF 2019
+					</title>
+					<subtitle>
+						In the first half of 2019, comedy has come in the form of star vehicles (Long Shot, The Dead Donât Die, The Professor), rom-com satires (Isnât It Romantic), actual actual rom-coms (Plus One, Always Be My Maybe).
+					</subtitle>
+					<image>
+						https://cdn3.movieweb.com/i/movie/k2FnCXxWd0aNU7pkkfLisaJQVeiBYP/460:50/Long-Shot.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							https://editorial.rottentomatoes.com/guide/best-comedies-2019/
+						</url>
+					</button>
+				</card>
+				<card>
+					<title>
+						BEST HORROR MOVIES OF 2019
+					</title>
+					<subtitle>
+						Itâs been a strong decade for horror films â how will 2019 close out the 2010s? To keep track of all the thrills, chills, and blood spills, weâve collected all the notable entries of the first half of the year.
+					</subtitle>
+					<image>
+						https://m.media-amazon.com/images/M/MV5BYTJlNjlkZTktNjEwOS00NzI5LTlkNDAtZmEwZDFmYmM2MjU2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							https://editorial.rottentomatoes.com/guide/best-horror-movies-of-2019/
+						</url>
+					</button>
+				</card>
+				<card>
+					<title>
+						BEST SCI-FI MOVIES OF 2019
+					</title>
+					<subtitle>
+						2019 is one of those movie years that sees cosmic superheroes, unstoppable syndicate assassins, and crime-solving pocket monsters with regularity.
+					</subtitle>
+					<image>
+						https://cdn3.movieweb.com/i/movie/YI0HL5memw9l8wkp5629Af9CqzbMCd/384:50/Aladdin.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							hhttps://editorial.rottentomatoes.com/guide/best-sci-fi-movies-and-the-worst-of-2019/
+						</url>
+					</button>
+				</card>
+			</carousel>
+		</template>
+	</category>
+	
+	<!-- Music -->
+	<category>
+		<pattern>
+			MUSIC
+		</pattern>
+		<template>
+			Choose the music genre which you like
+			<carousel>
+				<card>
+					<title>
+						Best Pop Songs 2019
+					</title>
+					<subtitle>
+						Pop Hits 2019 - Best Pop Songs 2019 - Top 30 Greatest Popular Songs 2019
+					</subtitle>
+					<image>
+						https://i.ytimg.com/vi/8LB2o7qqoMQ/maxresdefault.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							https://www.youtube.com/watch?v=8LB2o7qqoMQ
+						</url>
+					</button>
+				</card>
+				<card>
+					<title>
+						Best Rap Songs of 2019
+					</title>
+					<subtitle>
+						Best Rap Songs of 2019 So Far!
+					</subtitle>
+					<image>
+						https://i.ytimg.com/vi/AvVk3jgVkLc/maxresdefault.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							https://www.youtube.com/watch?v=AvVk3jgVkLc
+						</url>
+					</button>
+				</card>
+				<card>
+					<title>
+						New Rock Songs 2019
+					</title>
+					<subtitle>
+						New Rock Songs 2019 - Top 20 Best Rock Songs of 2000s - New Rock 2019
+					</subtitle>
+					<image>
+						https://i.ytimg.com/vi/vVyKVAL7Ego/maxresdefault.jpg
+					</image>
+					<button>
+						<text>
+							Click here
+						</text>
+						<url>
+							https://www.youtube.com/watch?v=vVyKVAL7Ego
+						</url>
+					</button>
+				</card>
+			</carousel>
+		</template>
+	</category>
+	
+	<!-- Let's talk -->
+	<category>
+		<pattern>
+			TALK
+		</pattern>
+		<template>
+			Tell me a little bit about yorself
+			<button>
+				<text>
+					OK
+				</text>
+				<postback>
+					Feelings
+				</postback>
+			</button>
+			<button>
+				<text>
+					NO
+				</text>
+				<postback>
+					I am * *
+				</postback>
+			</button>
+		</template>
+	</category>
+	
+	<!-- Mood -->
+	<category>
+		<pattern>Feelings</pattern>
+		<template>How are you feeling today?</template>
+	</category>
+	
+	<!-- Mood part 2 -->
+	<category>
+	    <pattern>FEELING *</pattern>
+		<template>
+		    <think><set name="mood"><star/></set></think>
+		    <condition name="mood" value="good">I am happy to hear it.</condition>
+		    <condition name="mood" value="ok">You need to relax a little bit, you can read a book or even watch a movie</condition>
+		    <condition name="mood" value="bad">I feel sorry for you. You can always listen to music or read motivation quotes, would you like to read some?
+		    <reply>
+		        <text>YES</text>
+		        <postback>YES</postback>
+	        </reply>
+	        <reply>
+		        <text>NO</text>
+		        <postback>NO</postback>
+	        </reply>
+		    </condition>
+		</template>
+    </category>
+    
+    <!-- Random Quotes -->
+    <category>
+        <pattern>YES</pattern>
+        <template>
+            <random>
+                <li>Sometimes later becomes never. Do it now.</li>
+                <li>Push yourself, because no one else is going to do it for you.</li>
+                <li>It does not matter how slowly you go as long as you do not stop.</li>
+                <li>Your limitationâitâs only your imagination.</li>
+                <li>Donât stop when youâre tired. Stop when youâre done.</li>
+            </random>
+        </template>
+    </category>
+    
+	<!-- Date -->
+	<category>
+		<pattern>
+			WHAT IS THE DATE
+		</pattern>
+		<template>
+			Today is
+			<date format="%B %d, %Y" />
 		</template>
 	</category>
 	
@@ -134,101 +387,43 @@
 		</template>
 	</category>
 	
-	<!-- Movies -->
+	<!-- Count -->
 	<category>
 		<pattern>
-			MOVIES
+			COUNT TO
+			<set>
+				number
+			</set>
 		</pattern>
 		<template>
-			Choose the genre of movies which you mostly like
-			<carousel>
-				<card>
-					<title>
-						THE BEST ACTION MOVIES OF 2019
-					</title>
-					<subtitle>
-						What is the state of the action movie in 2019? You could say theyâve never been stronger: They generate all the hype and they break all the records â we just call them superhero movies these days.Made of metal
-					</subtitle>
-					<image>
-						https://images-na.ssl-images-amazon.com/images/I/91wc7yc2R8L._SL1500_.jpg
-					</image>
-					<button>
-						<text>
-							Click here
-						</text>
-						<url>
-							https://editorial.rottentomatoes.com/guide/best-action-movies-of-2019/
-						</url>
-					</button>
-				</card>
-				<card>
-					<title>
-						THE BEST COMEDY MOVIES OF 2019
-					</title>
-					<subtitle>
-						In the first half of 2019, comedy has come in the form of star vehicles (Long Shot, The Dead Donât Die, The Professor), rom-com satires (Isnât It Romantic), actual actual rom-coms (Plus One, Always Be My Maybe).
-					</subtitle>
-					<image>
-						https://cdn3.movieweb.com/i/movie/k2FnCXxWd0aNU7pkkfLisaJQVeiBYP/460:50/Long-Shot.jpg
-					</image>
-					<button>
-						<text>
-							Click here
-						</text>
-						<url>
-							https://editorial.rottentomatoes.com/guide/best-comedies-2019/
-						</url>
-					</button>
-				</card>
-				<card>
-					<title>
-						BEST SCI-FI MOVIES OF 2019
-					</title>
-					<subtitle>
-						2019 is one of those movie years that sees cosmic superheroes, unstoppable syndicate assassins, and crime-solving pocket monsters with regularity.
-					</subtitle>
-					<image>
-						https://cdn3.movieweb.com/i/movie/YI0HL5memw9l8wkp5629Af9CqzbMCd/384:50/Aladdin.jpg
-					</image>
-					<button>
-						<text>
-							Click here
-						</text>
-						<url>
-							hhttps://editorial.rottentomatoes.com/guide/best-sci-fi-movies-and-the-worst-of-2019/
-						</url>
-					</button>
-				</card>
-			</carousel>
+			<think>
+				<set name="count">
+					0
+				</set>
+			</think>
+			<condition name="count">
+				<li>
+					<value>
+						<star />
+					</value>
+				</li>
+				<li>
+					<set name="count">
+						<map>
+							<name>
+								successor
+							</name>
+							<get name="count" />
+						</map>
+					</set>
+					<loop />
+				</li>
+			</condition>
 		</template>
 	</category>
 	
-	<!-- Music -->
-	<category>
-		<pattern>
-			MUSIC
-		</pattern>
-		<template>
-		 I can show you random music videos 
-		 <random>
-		     <li>
-		      <![CDATA[<video width="500" controls src="http://dl128.y2mate.com/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ3dqOUEwMHdrY0RxVkptWjBtMit1ME1QWmRKNk1LOG9Xa0Y5ZFgvRC9VVHNhQ05BcUdpYWd4RHlPUjllOWtrenI2ek4xMkNkay9Xd2FzM2VDcW1qUkptUWJoZG9XSVI1NVBZbUp2dGtKbWxuUzF3ZUdBL0VmZTRUai9nVlRSWVNVZXQzVUlNdmlidk5SY3dtekZlKzdiM0o0QWtqYVc3cFZkeWMrUHZRWHovTDA0dnRWMlYwVjRUSVpVM1ovNjRNRGI2QmNKZ3FCRjhFaVJsckh3Vm81N0ViWEtQelI4TnljSC9jYmZBVWxQbld0UG9UM3dydjlydnpSY042VnQrR3VtL09iZ2F6ckZMNWVoSGNEVmNybnM4QT09"></video>]]>
-		       Twenty One Pilots - Ride
-		     </li>
-		       <li>
-		         <![CDATA[<video width="500" controls src="https://r5---sn-f5f7lnel.googlevideo.com/videoplayback?expire=1572219446&ei=1dW1XbXNKJqnxwLo-YfIBA&ip=178.217.216.184&id=o-AFxlUkvu_5BEt4VzW2oNkT8c-YpPRGJGyr8PPKfz_SmW&itag=18&source=youtube&requiressl=yes&gcr=pl&mime=video%2Fmp4&gir=yes&clen=19863079&ratebypass=yes&dur=270.837&lmt=1544178167332004&fvip=5&fexp=23842630&c=WEB&txp=5531432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cgcr%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=ALgxI2wwRAIgaC6Tfcmy00yyFLNjEYGs-MpYLlO_7zJ54I_t56cGB-oCIGUFEsw_pd930W_1AANuqm3iHfwguIhop9jkgMzhwt1O&video_id=aJOTlE1K90k&title=Maroon+5+-+Girls+Like+You+ft.+Cardi+B&rm=sn-x2pm-3uf676,sn-f5fr76&req_id=77bca086da80a3ee&redirect_counter=2&cms_redirect=yes&ipbypass=yes&mip=212.191.80.145&mm=29&mn=sn-f5f7lnel&ms=rdu&mt=1572197776&mv=m&mvi=4&pl=20&lsparams=ipbypass,mip,mm,mn,ms,mv,mvi,pl&lsig=AHylml4wRAIgfJUZLaYAQFcZfaAM38C8lWVjJBAbtXh4-k1MYoJq48YCIHT0GYt8m7M8pBvSwMThf60NogEsHNzd_YSbYLyKaK9M"></video>]]>
-		         Maroon 5 - Girls Like You ft. Cardi B
-		     </li>
-		      <li>
-		         <![CDATA[<video width="500" controls src="https://r1---sn-f5f7ln7y.googlevideo.com/videoplayback?expire=1572183705&ei=OUq1XYWPB9Sn1gKjk5_YBw&ip=114.7.164.246&id=o-AK9J4E1-SA8pHoAOXqQWi6U7VhnoKTdCnuXM1fI3B6j_&itag=18&source=youtube&requiressl=yes&mime=video%2Fmp4&gir=yes&clen=5120534&ratebypass=yes&dur=165.047&lmt=1547588871066097&fvip=1&fexp=23842630&c=WEB&txp=5531432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=ALgxI2wwRQIhAI7iyTSj62DNZc_68mqHQYxmtpc1RJjLoIQoIpGsHmVLAiAv45uqRUbU874RjRK5q0vw78pIJ0N6B2_syG5o_lx9hQ%3D%3D&video_id=vdB-8eLEW8g&title=Bob+Marley+-+One+Love&rm=sn-poqvn5u-jb3d7e,sn-npolz7e&req_id=d1303ffe5278a3ee&redirect_counter=2&cms_redirect=yes&ipbypass=yes&mip=212.191.80.145&mm=30&mn=sn-f5f7ln7y&ms=nxu&mt=1572166823&mv=u&mvi=0&pl=20&lsparams=ipbypass,mip,mm,mn,ms,mv,mvi,pl&lsig=AHylml4wRQIgH2ofYdm4GjLfzjUm5pwJL1rLkUD6FGONBVAEel5l27oCIQDUA5Kp4e-IQDJBBcEiZNKk3sTpon21lw3i3VeMZ0uFsg=="></video>]]>
-		       Bob Marley - One Love
-		     </li>
-		 </random>
-	    
-		</template>
-	</category>
 	
-	<!-- Goodbyes -->
+	<!-- THANK YOU -->
 	<category>
 		<pattern>
 			THANK YOU
@@ -247,6 +442,13 @@
 			</random>
 		</template>
 	</category>
+	
+	
+	<!-- Goodbyes -->
+	<category>
+	    <pattern>NO</pattern>
+	    <template>Bye, maybe next time</template>
+    </category>
 	<category>
 		<pattern>
 			BYE
@@ -257,7 +459,9 @@
 					Bye!
 				</li>
 				<li>
-				<image>https://media.giphy.com/media/KctrWMQ7u9D2du0YmD/giphy.gif</image>
+					<image>
+						https://media.giphy.com/media/KctrWMQ7u9D2du0YmD/giphy.gif
+					</image>
 				</li>
 				<li>
 					Have a nice day!
