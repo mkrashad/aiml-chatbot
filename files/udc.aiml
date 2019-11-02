@@ -61,7 +61,7 @@
 			 * years
 		</pattern>
 		<template>
-			Excellent, now I would like to know your name and lastname.
+			Excellent, now I would like to know your firstname and lastname.
 		</template>
 	</category>
 	
@@ -77,7 +77,7 @@
 				<star index="2" />
 			</set>
 			.
-			I can recommend you top great movies or top songs. What do you like movies or music?
+			I can recommend you top great movies or top songs. What do you like most?
 			<reply>
 				<text>
 					Movies
@@ -216,12 +216,12 @@
 		       Twenty One Pilots - Ride
 		     </li>
 		       <li>
-		         <![CDATA[<video width="500" controls src="http://dl104.y2mate.com/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ3BtY2MxeUI0Y1ZKUkxyNThqeE51c0tzSktFYjRBMkxXa0JlRlg5Q3pjZU8rSkR3NmptYXdxWnlLcXJvWTJobXlabzU1dVZOa2xFQkR4bCtPY2hqQmlnVnF3TFA3VUdxMUNlSFYrNWhKRjNqYkhpYVB5NFZDcWxXVC9xa3lYYVdvSnZUWkFjTDdkOEkxSDJtZjBPc2pqMm9JSnZobVQ2NUZNNWVtU29UN3cxNDA5dWM1eFYzdDJUSkYzOXE3NStxSG4vQmNTdjhwS2lsM3FwUEx5UUowNUZhQ1FiUjVBWTNCWXU2RytCVXBRbDNWUXFUanJzS285L21rYmRMUjg1V2ZwcUtlK05HN0pLWnFpRmc9PQ%3D%3D"></video>]]>
+		         <![CDATA[<video width="500" controls src="https://r5---sn-f5f7lnel.googlevideo.com/videoplayback?expire=1572219446&ei=1dW1XbXNKJqnxwLo-YfIBA&ip=178.217.216.184&id=o-AFxlUkvu_5BEt4VzW2oNkT8c-YpPRGJGyr8PPKfz_SmW&itag=18&source=youtube&requiressl=yes&gcr=pl&mime=video%2Fmp4&gir=yes&clen=19863079&ratebypass=yes&dur=270.837&lmt=1544178167332004&fvip=5&fexp=23842630&c=WEB&txp=5531432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cgcr%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=ALgxI2wwRAIgaC6Tfcmy00yyFLNjEYGs-MpYLlO_7zJ54I_t56cGB-oCIGUFEsw_pd930W_1AANuqm3iHfwguIhop9jkgMzhwt1O&video_id=aJOTlE1K90k&title=Maroon+5+-+Girls+Like+You+ft.+Cardi+B&rm=sn-x2pm-3uf676,sn-f5fr76&req_id=77bca086da80a3ee&redirect_counter=2&cms_redirect=yes&ipbypass=yes&mip=212.191.80.145&mm=29&mn=sn-f5f7lnel&ms=rdu&mt=1572197776&mv=m&mvi=4&pl=20&lsparams=ipbypass,mip,mm,mn,ms,mv,mvi,pl&lsig=AHylml4wRAIgfJUZLaYAQFcZfaAM38C8lWVjJBAbtXh4-k1MYoJq48YCIHT0GYt8m7M8pBvSwMThf60NogEsHNzd_YSbYLyKaK9M"></video>]]>
 		         Maroon 5 - Girls Like You ft. Cardi B
 		     </li>
 		      <li>
-		         <![CDATA[<video width="500" controls src="http://dl126.y2mate.com/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ29uY0VwK0JjbUZaUllxWW9xdyt5bE1mWk9JS013eTQrbkhlRlYrU3pSZHRpZkR3Mkd0S2NyUTJHTjhzOENuaWIvM28xekFmZ2tkQlhIeUxEemhuOTdtVk96ZU5IQkVJZEdiR056L2dVeDlUK2MyZVhCdXhDOTRWdWd0eG5HUGdKUzkya3RKS2ZkOEl0Tm0yckVZcnlwbUp3QXVUV2c1WjlkNWVTU3N3VGl5N2NzaDkxN1dudHlkcFZSNXB2NXpmbkxyVk1tZ3BZZTVVQ2x1KzZqSDZFU0JaV3plbVFvRDNjcjZ0QzhDa3NPZ1NnT3JDcTkrcVlnNEhRZ1FmMG51VEQ2cUt1NEtHZklNSk9pR3RlQk12aTB0TUR0Ni9SazRoQ1U4YkdXemNJWXgxbz0%3D"></video>]]>
-		       Bob Marley - Lets get together and feel alright
+		         <![CDATA[<video width="500" controls src="https://r1---sn-f5f7ln7y.googlevideo.com/videoplayback?expire=1572183705&ei=OUq1XYWPB9Sn1gKjk5_YBw&ip=114.7.164.246&id=o-AK9J4E1-SA8pHoAOXqQWi6U7VhnoKTdCnuXM1fI3B6j_&itag=18&source=youtube&requiressl=yes&mime=video%2Fmp4&gir=yes&clen=5120534&ratebypass=yes&dur=165.047&lmt=1547588871066097&fvip=1&fexp=23842630&c=WEB&txp=5531432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=ALgxI2wwRQIhAI7iyTSj62DNZc_68mqHQYxmtpc1RJjLoIQoIpGsHmVLAiAv45uqRUbU874RjRK5q0vw78pIJ0N6B2_syG5o_lx9hQ%3D%3D&video_id=vdB-8eLEW8g&title=Bob+Marley+-+One+Love&rm=sn-poqvn5u-jb3d7e,sn-npolz7e&req_id=d1303ffe5278a3ee&redirect_counter=2&cms_redirect=yes&ipbypass=yes&mip=212.191.80.145&mm=30&mn=sn-f5f7ln7y&ms=nxu&mt=1572166823&mv=u&mvi=0&pl=20&lsparams=ipbypass,mip,mm,mn,ms,mv,mvi,pl&lsig=AHylml4wRQIgH2ofYdm4GjLfzjUm5pwJL1rLkUD6FGONBVAEel5l27oCIQDUA5Kp4e-IQDJBBcEiZNKk3sTpon21lw3i3VeMZ0uFsg=="></video>]]>
+		       Bob Marley - One Love
 		     </li>
 		 </random>
 	    
